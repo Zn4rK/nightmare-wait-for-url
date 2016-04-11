@@ -10,7 +10,7 @@ Nightmare.action(
             navigationHistory.push(url);
         });
 
-        // Get the list of navigated urls
+        // Get the latest url
         parent.on('waitForUrl', function() {
             parent.emit('waitForUrl', navigationHistory[navigationHistory.length-1]);
         });
@@ -27,12 +27,9 @@ Nightmare.action(
         // Our event handler
         var handler = function(latestUrl) {
             if(latestUrl.match(matchUrl)) {
-                // Remove the listener if we have a match
                 self.child.removeListener('waitForUrl', handler);
 
                 clearTimeout(timeout);
-
-                // Done
                 done(null, true);
             } else {
                 // If we don't match, emit again
@@ -42,8 +39,6 @@ Nightmare.action(
 
         // Callback on waitForUrl
         self.child.on('waitForUrl', handler);
-
-        // Call the parent to get the list of url's we've navigated to
         self.child.emit('waitForUrl');
     }
 );
