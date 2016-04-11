@@ -1,0 +1,32 @@
+{
+  "name": "nightmare-wait-for-url",
+  "version": "0.0.1",
+  "license": "MIT",
+  "main": "./nightmare-wait-for-url.js",
+  "description":"Add .waitForUrl() to NightmareJS",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Zn4rK/nightmare-wait-for-url"
+  },
+  "author": "Alexander Liljengård",
+  "keywords": [
+    "nightmare",
+    "phantomjs",
+    "nightmarejs",
+    "waitForUrl"
+  ],
+  "dependencies": {
+    "debug": "^2.2.0",
+    "nightmare": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "express": "^4.13.3",
+    "mocha-generators": "^1.2.0",
+    "mocha": "^2.3.0",
+    "serve-static": "^1.10.0"
+  }
+}
