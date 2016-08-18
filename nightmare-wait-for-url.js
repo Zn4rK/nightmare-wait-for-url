@@ -21,8 +21,8 @@ Nightmare.action(
         var self = this;
 
         var timeout = setTimeout(function() {
-            return done(new Error('.waitForUrl(): timed out after ' + self.optionWaitTimeout + 'ms - could not find a matching url'));
-        }, self.optionWaitTimeout);
+            return done(new Error('.waitForUrl(): timed out after ' + self.options.waitTimeout + 'ms - could not find a matching url'));
+        }, self.options.waitTimeout);
 
         // Our event handler
         var handler = function(latestUrl) {
