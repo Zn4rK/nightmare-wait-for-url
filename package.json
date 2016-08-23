@@ -1,6 +1,6 @@
 {
   "name": "nightmare-wait-for-url",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "main": "./nightmare-wait-for-url.js",
   "description":"Add .waitForUrl() to NightmareJS",
